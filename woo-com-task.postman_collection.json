@@ -1,0 +1,305 @@
+{
+	"info": {
+		"_postman_id": "8735027a-0e7d-4ba8-bd1a-d02cf4b5f7e4",
+		"name": "woo-com-task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26630892",
+		"_collection_link": "https://interstellar-resonance-795489.postman.co/workspace/Team-Workspace~416ba652-5d6d-4de3-84f4-a4bc4b47bc0e/collection/26630892-8735027a-0e7d-4ba8-bd1a-d02cf4b5f7e4?action=share&source=collection_link&creator=26630892"
+	},
+	"item": [
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Njc3ZTZkNTQ3YmFmMmM1ZDkwOTMyOSIsImlhdCI6MTc1MTYxMzE2NywiZXhwIjoxNzUxNjk5NTY3fQ.neRkFxHFLjySa18EZfUOdCOrTLBjqImnFQlUrUMFnKA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "test hello",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "299",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Ranvijay Singh/Downloads/download.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/wp-json/wc/v3/products",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"wp-json",
+								"wc",
+								"v3",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Njc3ZTZkNTQ3YmFmMmM1ZDkwOTMyOSIsImlhdCI6MTc1MTYxMzE2NywiZXhwIjoxNzUxNjk5NTY3fQ.neRkFxHFLjySa18EZfUOdCOrTLBjqImnFQlUrUMFnKA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test-new",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "test hello 2",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "2992",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Ranvijay Singh/Downloads/download (1).jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/wp-json/wc/v3/products/68678408622278df4516063c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"wp-json",
+								"wc",
+								"v3",
+								"products",
+								"68678408622278df4516063c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-by-id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Njc3ZTZkNTQ3YmFmMmM1ZDkwOTMyOSIsImlhdCI6MTc1MTYxMzE2NywiZXhwIjoxNzUxNjk5NTY3fQ.neRkFxHFLjySa18EZfUOdCOrTLBjqImnFQlUrUMFnKA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/wp-json/wc/v3/products/68678408622278df4516063c",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"wp-json",
+								"wc",
+								"v3",
+								"products",
+								"68678408622278df4516063c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-all",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Njc3ZTZkNTQ3YmFmMmM1ZDkwOTMyOSIsImlhdCI6MTc1MTYxMzE2NywiZXhwIjoxNzUxNjk5NTY3fQ.neRkFxHFLjySa18EZfUOdCOrTLBjqImnFQlUrUMFnKA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/wp-json/wc/v3/products?page=1&limit=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"wp-json",
+								"wc",
+								"v3",
+								"products"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Njc3ZTZkNTQ3YmFmMmM1ZDkwOTMyOSIsImlhdCI6MTc1MTYxMzE2NywiZXhwIjoxNzUxNjk5NTY3fQ.neRkFxHFLjySa18EZfUOdCOrTLBjqImnFQlUrUMFnKA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/wp-json/wc/v3/products/68678408622278df4516063c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"wp-json",
+								"wc",
+								"v3",
+								"products",
+								"68678408622278df4516063c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"test\",\r\n    \"email\": \"test@gmail.com\",\r\n    \"phoneNumber\": \"1234567890\",\r\n    \"password\": \"12345\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/wp-json/wc/v3/auth/register",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"wp-json",
+						"wc",
+						"v3",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test@gmail.com\",\r\n    \"password\": \"12345\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/wp-json/wc/v3/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"wp-json",
+						"wc",
+						"v3",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-by-token",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
