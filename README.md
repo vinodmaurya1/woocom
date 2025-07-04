@@ -19,16 +19,18 @@ This repository contains a full-stack application with a Node.js backend and Rea
 1. **Navigate to the root directory**
 
    Open your terminal and run:
-
+```
  npm install
-
+```
 mongo
 > use woocom
-
+```
 mongodb://localhost:27017/woocomdb
 
+```
+```
 npm start
-
+```
 
 ## Frontend  Setup
 
