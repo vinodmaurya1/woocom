@@ -25,7 +25,7 @@ This repository contains a full-stack application with a Node.js backend and Rea
 mongo
 > use woocom
 ```
-mongodb://localhost:27017/woocomdb
+mongodb://localhost:27017/woocom
 
 ```
 ```
