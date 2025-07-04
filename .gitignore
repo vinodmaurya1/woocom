@@ -6,3 +6,8 @@ npm-debug.log*
 # React frontend
 frontend/node_modules/
 frontend/build/
+
+
+# General
+.DS_Store
+*.log
