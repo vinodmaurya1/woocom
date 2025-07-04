@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  @apply font-sans;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.perspective {
+  perspective: 1000px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+/* styles.css */
+.custom-padding {
+  padding-left: 40px!important;
+  padding-right: 40px!important;
+}
+
+@media (min-width: 768px) {
+  .custom-padding {
+    padding-left: 0!important;
+    padding-right: 0!important;
+  }
+}
+
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  background-color: #25d366;
+  border-radius: 50%;
+  padding: 14px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+ 
+
+
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.animated-gradient-bg {
+  background: linear-gradient(
+    45deg,
+    #000000,
+    #1a1a1a,
+    #333333,
+    #1a1a1a,
+    #000000
+  );
+  background-size: 200% 200%;
+  animation: gradientShift 90s ease infinite;
+}
